@@ -10,7 +10,9 @@ namespace CGO_Buoi05
     {
         static void Main(string[] args)
         {
-            int tuoi=-1;        //while , do _ while
+
+            Console.WriteLine("{0:2f}", 1.0 / 3);
+            int tuoi =-1;        //while , do _ while
             int luot_dem = 3;   //vi du chi duoc nhap 3 lan
         nhap_du_lieu:
             Console.Write("Nhap tuoi: ");

@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGO_Buoi04", "CGO_Buoi04.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi05", "..\CGO_Buoi05\CGO_Buoi05.csproj", "{E4054BFD-1850-4B6B-B2E4-EF901B65C350}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi06", "..\CGO_Buoi06\CGO_Buoi06.csproj", "{AD6CFF41-A195-4FA3-B237-1CF315B08321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi07", "..\CGO_Buoi07\CGO_Buoi07.csproj", "{280356C4-02D8-4B4F-9D47-55D3904478F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{E4054BFD-1850-4B6B-B2E4-EF901B65C350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4054BFD-1850-4B6B-B2E4-EF901B65C350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4054BFD-1850-4B6B-B2E4-EF901B65C350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6CFF41-A195-4FA3-B237-1CF315B08321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6CFF41-A195-4FA3-B237-1CF315B08321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6CFF41-A195-4FA3-B237-1CF315B08321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6CFF41-A195-4FA3-B237-1CF315B08321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280356C4-02D8-4B4F-9D47-55D3904478F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280356C4-02D8-4B4F-9D47-55D3904478F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280356C4-02D8-4B4F-9D47-55D3904478F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280356C4-02D8-4B4F-9D47-55D3904478F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
