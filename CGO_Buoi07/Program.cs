@@ -21,8 +21,8 @@ namespace CGO_Buoi07
                 else a[i] = temp;
             }
         
-        //Duyet phan tu mang
-        Console.WriteLine(string.Join(" ", a));
+            //Duyet phan tu mang
+            Console.WriteLine(string.Join(" ", a));
             int dem_cp = 0;
             foreach (int item in a)
             {
