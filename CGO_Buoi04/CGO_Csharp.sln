@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi07", "..\CGO_Buoi07
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi10_Mang2Chieu", "..\CGO_Buoi10_Mang2Chieu\CGO_Buoi10_Mang2Chieu.csproj", "{F4084C88-8DC6-4C63-8388-E445DA828984}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi13_Ham", "..\CGO_Buoi13_Ham\CGO_Buoi13_Ham.csproj", "{46154B45-1DCA-4D4D-87C9-9BD008D44D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGO_Buoi15_DuAn1", "..\CGO_Buoi15_DuAn1\CGO_Buoi15_DuAn1.csproj", "{1A6A3F06-589C-4E56-9C22-34261534484D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{F4084C88-8DC6-4C63-8388-E445DA828984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4084C88-8DC6-4C63-8388-E445DA828984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4084C88-8DC6-4C63-8388-E445DA828984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46154B45-1DCA-4D4D-87C9-9BD008D44D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46154B45-1DCA-4D4D-87C9-9BD008D44D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46154B45-1DCA-4D4D-87C9-9BD008D44D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46154B45-1DCA-4D4D-87C9-9BD008D44D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6A3F06-589C-4E56-9C22-34261534484D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6A3F06-589C-4E56-9C22-34261534484D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6A3F06-589C-4E56-9C22-34261534484D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6A3F06-589C-4E56-9C22-34261534484D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
