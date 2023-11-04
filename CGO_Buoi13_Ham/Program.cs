@@ -32,6 +32,18 @@ namespace CGO_Buoi13_Ham
         }
         static void Main(string[] args)
         {
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            Console.WriteLine("Thong tin phim vua nhan:");
+            Console.WriteLine("Hien thi: {0}", keyInfo.KeyChar.ToString());
+            Console.WriteLine("Ma code: {0}" , keyInfo.Key);
+            Console.WriteLine("Thiet lap mau sac");
+
+            
+            Console.SetCursorPosition(50, 10);
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Sau khi thiet lap mau sac");
+
             List<int> lst = new List<int> { 1, 2, 3, 4, 5, 6,1 ,7 };
             int value = 1;
             while(lst.IndexOf(value) >= 0)

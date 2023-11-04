@@ -27,7 +27,7 @@ namespace CGO_Buoi15_DuAn1
         {
             Console.SetWindowSize(width, height + panel);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.CursorVisible = false;
+            Console.CursorVisible = false;      //ẩn con trỏ
 
             Console.WriteLine("============================================");
             Console.WriteLine("=================SNAKE GAME=================");
@@ -54,19 +54,21 @@ namespace CGO_Buoi15_DuAn1
             randomQua();
         }
         //Random diem an qua
-        private void randomQua()
+        int typeFruit = 1;
+        void randomQua()
         {
-            fruitX = rand.Next(1, width - 1);
-            fruitY = rand.Next(1, height - 1);
+            fruitX = rand.Next(1, width - 2);
+            fruitY = rand.Next(1, height - 2);
+            typeFruit = rand.Next(1, 5);
         }
         //Cap nhat man hinh
         void Update()
         {
             while (!gameOver)
             {
-                CheckInput();
-                Logic();
-                Render();
+                CheckInput(); //nhận lệnh điều hướng
+                Logic();      //xử lý lệnh điều hướng
+                Render();     //in ra màn hình  
                 if (reset) break;
                 Thread.Sleep(30);
             }
@@ -77,9 +79,9 @@ namespace CGO_Buoi15_DuAn1
         void CheckInput()
         {
             while (Console.KeyAvailable)
-            {
+            {   
                 keypress = Console.ReadKey(true);
-                pre_dir = dir;
+                pre_dir = dir;  //backup hướng di chuyển trước đó 
                 switch (keypress.Key)
                 {
                     case ConsoleKey.Q: Environment.Exit(0); break;
@@ -147,10 +149,11 @@ namespace CGO_Buoi15_DuAn1
             //kiem tra an qua
             if (headX == fruitX && headY == fruitY)
             {
-                score += 10; nTail++;
+                score += typeFruit; nTail++;
                 randomQua();
             }
 
+            //xac dinh chieu dang di chuyen con ran 
             if (((dir == "LEFT" && pre_dir != "UP") && (dir == "LEFT" && pre_dir != "DOWN")) || (
                 (dir == "RIGHT" && pre_dir != "UP") && (dir == "RIGHT" && pre_dir != "DOWN")))
                 horizontal = true;
@@ -160,9 +163,11 @@ namespace CGO_Buoi15_DuAn1
                 (dir == "DOWN" && pre_dir != "LEFT") && (dir == "DOWN" && pre_dir != "RIGHT")))
                 vertical = true;
             else vertical = false;
-
+            
+            //kiem tra thân con rắn
             for (int i = 1; i < nTail; i++)
             {
+                //thân va chạm với đầu
                 if (TailX[i] == headX && TailY[i] == headY)
                 {
                     if (horizontal || vertical)
@@ -170,6 +175,7 @@ namespace CGO_Buoi15_DuAn1
                     else
                         gameOver = true;
                 }
+                //quả trùng với thân con rắn  (phần lệnh //kiem tra an qua)
                 if (TailX[i] == fruitX && TailY[i] == fruitY)
                     randomQua();
             }
@@ -187,9 +193,16 @@ namespace CGO_Buoi15_DuAn1
                     else if (j == 0 || j == width - 1)  //vien khung
                         Console.Write("#");
                     else if (j == fruitX && i == fruitY)//qua
-                        Console.Write("i");
-                    else if (j == headX && i == headY) //Dau con ran
+                    { 
+                        Console.Write(typeFruit); 
+                    }
+                    else if (j == headX && i == headY)
+                    { //Dau con ran
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("0");
+                        Console.ForegroundColor = ConsoleColor.Green;
+
+                    }
                     else
                     {
                         isprinted = false;
@@ -201,7 +214,7 @@ namespace CGO_Buoi15_DuAn1
                                 isprinted = true;
                             }
                         }
-                        if (!isprinted) Console.Write(".");
+                        if (!isprinted) Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
