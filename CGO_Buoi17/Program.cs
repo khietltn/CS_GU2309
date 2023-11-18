@@ -10,14 +10,27 @@ namespace CGO_Buoi17
     {
         static void Main(string[] args)
         {
-            Person p = new Person("Tom");
-            p.Show();
-            Citizen c = new Citizen("Ann", "HCMC");
-            c.Show();
+            Citizen c = new Citizen("Noname", "HNC");
+            c.
+            Shape s = new Shape();      //lop cha
+            s.Draw();
 
-            //Rectangle rectangle = new Rectangle(2, 5);
-            //Console.WriteLine(rectangle);
-            //Console.WriteLine("CV={0} | DT={1}", rectangle.getCV(), rectangle.getDT());
+            Circle c = new Circle();    //lop con
+            c.Draw();
+
+            Rectangle r = new Rectangle();//lop con
+            r.Draw();
+            ///Lớp cha gọi được hàm của lớp con (sử dụng List) 
+            ///Hàm lớp cha phải có virtual
+            ///Hàm lớp con override 
+            Console.WriteLine("\n\n Luu vao dang mang: ");
+            var shape = new List<Shape> {
+                new Shape(),
+                new Rectangle(),
+                new Circle(),
+                new Triangle()
+            };
+            foreach (var item in shape) item.Draw();
 
             /**
             //int a; a=10;      //int a=10;         // int b=a;
@@ -62,6 +75,7 @@ namespace CGO_Buoi17
         {
             return string.Format("{0}/{1}", tu, mau);
         }
+        
     }
     public class Point
     {
