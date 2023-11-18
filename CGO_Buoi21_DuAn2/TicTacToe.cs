@@ -10,7 +10,7 @@ namespace CGO_Buoi21_DuAn2
     {
         public TicTacToe()
         {
-
+            
         }
 
         public void play()
@@ -25,13 +25,18 @@ namespace CGO_Buoi21_DuAn2
             {
                 gameBoard.printBoard();     //in bàn cờ
                 Console.WriteLine("Player {0} enter the field in which you want to put the number:", currentPlayer.Sign);    //chờ ng dùng nhập dữ liệu
+            getTurn: 
                 try
                 {
-                   
-                    //xác định lượt và số number
+
+                //xác định lượt và số number
+                
                     int turn = currentPlayer.takeTurn();    //nhập dữ liệu
                     if (!gameBoard.putMark(currentPlayer.Sign, turn))
+                    {
                         xulySai();
+                        goto getTurn;
+                    }
                     else
                     {
                         gameBoard.clearBoard();
@@ -56,6 +61,7 @@ namespace CGO_Buoi21_DuAn2
                 }catch (Exception ex)
                 {
                     xulySai();
+                    goto getTurn;
                 }
             }
         }
@@ -63,8 +69,6 @@ namespace CGO_Buoi21_DuAn2
         private void xulySai()
         {
             Console.WriteLine("Invalid input. Please enter number between 1- 9!");
-            Console.ReadLine();
-            Console.Clear();
         }
     }
 }
