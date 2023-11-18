@@ -10,7 +10,10 @@ namespace CGO_Buoi21_DuAn2
     {
         static void Main(string[] args)
         {
+            TicTacToe game = new TicTacToe();
+            game.play();
 
+            Console.ReadKey();
         }
     }
 }
